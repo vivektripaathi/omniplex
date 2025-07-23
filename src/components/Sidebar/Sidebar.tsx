@@ -17,6 +17,7 @@ import { useDisclosure } from "@nextui-org/modal";
 import Logo from "../../../public/Logo.svg";
 import Menu from "../../../public/svgs/Menu.svg";
 import Pen from "../../../public/svgs/Pen.svg";
+import Crown from "../../../public/svgs/Crown.svg";
 import Chat from "../../../public/svgs/sidebar/Chat_Active.svg";
 import ChatInactive from "../../../public/svgs/sidebar/Chat_Inactive.svg";
 import Folder from "../../../public/svgs/sidebar/Folder_Active.svg";
@@ -103,11 +104,30 @@ const Sidebar = () => {
     router.push("/");
   };
 
+  const handleGetPro = () => {
+    router.push("/checkout");
+  };
+
   return (
     <>
       <div className={styles.header}>
         <div onClick={toggleSidebar} className={styles.menu}>
           <Image priority={true} src={Menu} alt="Menu" width={24} height={24} />
+        </div>
+        <div
+          className={styles.titleButton}
+          style={{ opacity: isSidebarOpen ? 0 : 1 }}
+          onClick={handleGetPro}
+        >
+          <Image
+            priority={true}
+            src={Crown}
+            alt={"Crown"}
+            width={20}
+            height={20}
+            className={styles.titleButtonIcon}
+          />
+          <p className={styles.titleButtonText}>Get Pro</p>
         </div>
         <div
           className={styles.titleButton}
@@ -196,6 +216,15 @@ const Sidebar = () => {
                   )}
                 </div>
                 <div>
+                  <div className={styles.getProButton} onClick={handleGetPro}>
+                    <Image
+                      src={Crown}
+                      alt="Crown"
+                      width={20}
+                      height={20}
+                      className={styles.crownIcon}
+                    />
+                  </div>
                   <Image
                     src={Collapse}
                     alt="Collapse"
