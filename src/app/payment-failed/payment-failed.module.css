@@ -1,0 +1,149 @@
+.container {
+    padding: 0rem;
+    min-height: 100vh;
+    background-color: #161616;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInFromNone 1000ms ease-in-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.content {
+    max-width: 512px;
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #232323;
+    border-radius: 12px;
+    border: 1px solid #ffffff14;
+}
+
+.iconContainer {
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #4a1a1a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorIcon {
+    /* CrossRed SVG already has proper styling */
+    opacity: 1;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.message {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    color: #cccccc;
+}
+
+.subMessage {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 32px;
+    color: #999999;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.retryButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    color: #161616;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.retryButton:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+.homeButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #ffffff40;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.homeButton:hover {
+    background-color: #ffffff10;
+    border-color: #ffffff60;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin: 16px;
+        padding: 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .retryButton,
+    .homeButton {
+        width: 100%;
+        max-width: 200px;
+    }
+}
