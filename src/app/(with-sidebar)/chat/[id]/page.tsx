@@ -1,5 +1,5 @@
+import AuthWrapper from "@/app/AuthWrapper";
 import Chat from "@/components/Chat/Chat";
-import AuthWrapper from "../../AuthWrapper";
 
 type Props = {
   params: { id: string };
